@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url('../img/luffy.jpg');
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    height: 8vh;
+    width: 100%;
+    color: white;
+}
+
+header a {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    transition: all 0.5s;
+}
+
+header a:hover {
+    transform: translateX(10px);
+    color: green;
+    font-size: 120%;
+}
+
+.big-title {
+    color: green;
+    background-color: white;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-align: center;
+}

@@ -1,0 +1,26 @@
+.login-post {
+    margin: 10% auto;
+    width: 20%;
+    height: auto;
+    background-color: rgb(8, 36, 10, 0.7);
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 20px;
+    border: 2px solid black
+}
+
+label {
+    color: white
+}
+
+.form-group input {
+    margin-left: 20px !important;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.submit {
+    width: 100px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
