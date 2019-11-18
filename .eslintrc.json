@@ -4,6 +4,10 @@
   "rules": {
     "no-unused-vars": "warn",
     "no-console": "off",
-    "no-process-exit": "off"
+    "no-process-exit": "off",
+    "node/no-unpublished-require": "off"
+  },
+  "env": {
+    "mocha": true
   }
 }

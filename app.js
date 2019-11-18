@@ -37,6 +37,7 @@ mongoose
 // route
 app.use('/', route.main);
 app.use('/login', route.login);
+app.use('/register', route.register);
 
 app.listen(3000, () => {
   console.log(`Server started on port ${process.env.PORT}`);
