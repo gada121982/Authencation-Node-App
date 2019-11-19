@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const route = require('./routes/index.route');
-
+const morgan = require('morgan');
+const helmet = require('helmet');
 require('dotenv').config();
 
 const app = express();
@@ -19,6 +20,8 @@ app.use(express.static('public'));
 app.use(cookieParser());
 app.set('view engine', 'ejs');
 app.set('views', './views');
+app.use(morgan('combined'));
+app.use(helmet());
 
 // connect dbs
 mongoose

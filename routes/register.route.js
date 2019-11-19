@@ -4,6 +4,6 @@ const register = require('../controllers/register.controller');
 const router = express();
 
 router.get('/', register.getRegister);
-router.post('path', register.postRegister);
+router.post('/', register.postRegister);
 
 module.exports = router;
