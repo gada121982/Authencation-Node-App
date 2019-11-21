@@ -17,10 +17,12 @@ const user = Schema({
         require: true
     },
     active: {
-        type: Boolean
+        type: Boolean,
+        default: false,
     },
     token: {
-        type: String
+        type: String,
+        default: ''
     },
 
 }, {

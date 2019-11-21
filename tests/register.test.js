@@ -16,7 +16,9 @@ describe('register service', () => {
         const gmail4 = 'gada@gmail..com';
         const gmail5 = 'gadagmail';
         const gmail6 = '';
+        const gmail7 = 'nguyenvinhhai@gmail.com';
 
+        expect(validateGmail(gmail7)).equal(true);
         expect(validateGmail(gmail1)).not.equal(true);
         expect(validateGmail(gmail2)).not.equal(true);
         expect(validateGmail(gmail3)).not.equal(true);

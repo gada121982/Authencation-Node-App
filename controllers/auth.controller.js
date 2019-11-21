@@ -1,6 +1,7 @@
 const user = require('../models/user.model');
 
 module.exports.getLogin = (req, res) => {
+    console.log(`this is res.locals ${res.locals.success_msg}`);
     res.render('login');
 };
 

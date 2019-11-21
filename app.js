@@ -5,6 +5,8 @@ const cookieParser = require('cookie-parser');
 const route = require('./routes/index.route');
 const morgan = require('morgan');
 const helmet = require('helmet');
+const session = require('express-session');
+const flash = require('connect-flash');
 require('dotenv').config();
 
 const app = express();
@@ -37,11 +39,12 @@ mongoose
     process.exit();
   });
 
+
 // route
 app.use('/', route.main);
 app.use('/login', route.login);
 app.use('/register', route.register);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Server started on port ${process.env.PORT}`);
 });
