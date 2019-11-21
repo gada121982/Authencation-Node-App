@@ -3,7 +3,8 @@ const bcrypt = require('bcryptjs');
 
 const {
     validateGmail,
-    validatePassword
+    validatePassword,
+    checkExistGmail
 } = require('../services/register.service.js');
 
 module.exports.getRegister = (req, res) => {
@@ -36,17 +37,13 @@ module.exports.postRegister = async (req, res) => {
         });
 
     }
-    // check exist gmail
-    await user.countDocuments({
-        gmail: req.body.gmail
-    }, (err, count) => {
-        if (err) throw new Error(err);
-        if (count > 0) {
-            error.push({
-                error: 'Your gmail existed'
-            });
-        }
-    });
+
+    const countGmailExisted = await checkExistGmail(req.body.gmail);
+    if (countGmailExisted > 0) {
+        error.push({
+            error: 'Your gmail existed'
+        });
+    }
 
     if (error.length > 0) {
         res.render('register', {
