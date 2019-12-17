@@ -10,9 +10,9 @@ const validatePassword = pwd => {
   return !(pwd === '' || pwd.length < 8);
 };
 
-const checkExistGmail = async (gmail) => {
+const checkExistGmail = async gmail => {
   const count = await user.countDocuments({
-    gmail: gmail
+    gmail
   });
   return count;
 };

@@ -2,11 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const route = require('./routes/index.route');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const session = require('express-session');
 const flash = require('connect-flash');
+const route = require('./routes/index.route');
 require('dotenv').config();
 
 const app = express();
@@ -27,7 +27,7 @@ app.use(helmet());
 
 // connect dbs
 mongoose
-  .connect(process.env.dbURL, {
+  .connect(process.env.dbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -38,7 +38,6 @@ mongoose
     console.log(`we have an error: ${err}`);
     process.exit();
   });
-
 
 // route
 app.use('/', route.main);

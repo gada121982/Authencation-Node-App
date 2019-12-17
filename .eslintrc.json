@@ -5,7 +5,7 @@
     "no-unused-vars": "warn",
     "no-console": "off",
     "no-process-exit": "off",
-    "node/no-unpublished-require": "off",
+    "node/no-unpublished-require": "off"
   },
   "env": {
     "mocha": true
